@@ -1,14 +1,15 @@
 package jin.kafkastart.config;
 
+import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.TopicBuilder;
 
 @Configuration
-public class NewTopic {
+public class KafkaTopicConfig {
 
     @Bean
-    public org.apache.kafka.clients.admin.NewTopic newTopic() {
+    public NewTopic jinTopic() {
         return TopicBuilder
                 .name("jin")
                 .build();
